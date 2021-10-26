@@ -7,7 +7,7 @@ const getNowDate = () => {
     return Math.floor(Date.now() / 1000)
 }
 
-const host = "http://20.113.89.5"
+const host = ""
 
 const NowPage = () => {
     const [from, setFrom] = useState(getNowDate() - 86400 * 2)
