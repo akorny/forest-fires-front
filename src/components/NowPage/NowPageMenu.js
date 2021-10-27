@@ -1,5 +1,30 @@
 import React from "react"
 
+const getMethodDescription = (method) => {
+    switch (method) {
+        case "jac":
+            return `Žakāra indeksa (JAC) metode ir jauna metode, kas potenciāli var tikt 
+            izmantota meža ugunsgrēku ietekmējošo faktoru svara vērtību noteikšanai un pārbaudei. Žakāra 
+            indekss, ko dēvē arī par Žakāra līdzības koeficientu, ir statistisks rādītājs, ko izmanto, lai 
+            izprastu līdzības starp izlašu kopām.`
+        case "ahp":
+            return `Analītiskās hierarhijas procesa  (AHP)  metode  ir  viena  no  visbiežāk  izmantotajām 
+            metodēm  pasaulē  meža  ugunsbīstamības  ietekmējošo  faktoru  svara  vērtību  noteikšanā  kā 
+            lēmumu  pieņemšanas  atbalsta  sistēma.  AHP  metodes  noteiktās  svara  vērtības  balstītas  uz 
+            ekspertu subjektīvu faktoru svara vērtību novērtējumu, kas transformēts kvantitatīvos lielumos, 
+            attēlojot  objektīvo  realitāti.`
+        case "mlc":
+            return `
+            Maximum likelihood classification (MLC) algoritma metode ir viena no populārākajām 
+            klasifikācijas metodēm Zemes tālizpētē. Metodes līdzšinējais pielietojums mežsaimniecībā ir 
+            bijis ugunsgrēku identificēšana satelītattēlos.
+            `
+        default:
+            return ""
+    }
+}
+
+
 const NowPageMenu = ({
     layer,
     setLayer,
@@ -78,6 +103,23 @@ const NowPageMenu = ({
                     <option value="2d">pēdējās 2d</option>
                     <option value="7d">pēdējās 7d</option>
                 </select>
+            </li>
+            <li className="list-group-item">
+                <div>
+                    <span style={{ color: "rgba(256, 0, 0, 0.5)" }}>&#9632;</span> - 
+                    Augsts risks
+                </div>
+                <div>
+                    <span style={{ color: "rgba(256, 256, 0, 0.5)" }}>&#9632;</span> - 
+                    Vidējs risks
+                </div>
+                <div>
+                    <span style={{ color: "rgba(0, 128, 0, 0.5)" }}>&#9632;</span> - 
+                    Zems risks
+                </div>
+            </li>
+            <li className="list-group-item" style={{textAlign: "justify"}}>
+                {getMethodDescription(method)}
             </li>
             {   
                 download

@@ -7,7 +7,7 @@ const getNowDate = () => {
     return Math.floor(Date.now() / 1000)
 }
 
-const host = "https://www.tea-spill-keyboard.id.lv"
+const host = ""
 
 const fromDelta = {
     "1h": 3600,
@@ -68,7 +68,9 @@ const NowPage = () => {
 
     const getSelectedTime = () => {
         if (data.layersets.length > 0) {
-            return new Date(data.layersets[parseInt(index)].date).toLocaleString("lv")
+            let date = new Date(data.layersets[parseInt(index)].date)
+            date.setHours(date.getHours() + 3)
+            return date.toLocaleString("lv")
         }
         else {
             return "nav slāņu"
