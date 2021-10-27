@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text-on-photo {
+  background-color:rgba(255, 255, 255, 0.7);
+  background-image: none;
+  color: black;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.photo-container {
+  background-color: "transparent";
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  font-size: 1.3em;
+}
+
+@media (max-width: 768px) { 
+  .photo-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

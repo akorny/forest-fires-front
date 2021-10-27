@@ -33,6 +33,24 @@ const Menu = () => {
                                 Ugunsbīstamība šobrīd
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink
+                                to="/use-api"
+                                activeClassName="active"
+                                className="nav-link"
+                            >
+                                API
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                to="/about"
+                                activeClassName="active"
+                                className="nav-link"
+                            >
+                                Par tīmekļa vietni
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>

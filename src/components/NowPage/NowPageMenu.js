@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const NowPageMenu = ({
     layer,
@@ -10,28 +10,10 @@ const NowPageMenu = ({
     indexTo,
     index,
     setIndex,
-    setPeriodFrom,
-    setPeriodTo
+    period,
+    setPeriod,
+    download
 }) => {
-    const [period, setPeriod] = useState("1h")
-
-    const fromDelta = {
-        "1h": 3600,
-        "4h": 4 * 3600,
-        "12h": 12 * 3600,
-        "24h": 24 * 3600,
-        "2d": 2 * 86400,
-        "7d": 7 * 86400,
-    }
-
-    const handlePeriodChange = (ev) => {
-        const val = ev.target.value
-        const now = Math.floor(Date.now() / 1000)
-        setPeriodFrom(now - fromDelta[val])
-        setPeriodTo(now)
-        setPeriod(val)
-    }
-
     return (
         <ul className="list-group">
             <li className="list-group-item">
@@ -87,7 +69,7 @@ const NowPageMenu = ({
                     id="period"
                     className="form-select"
                     value={period}
-                    onChange={handlePeriodChange}
+                    onChange={setPeriod}
                 >
                     <option value="1h">pēdējā 1h</option>
                     <option value="4h">pēdējās 4h</option>
@@ -97,6 +79,15 @@ const NowPageMenu = ({
                     <option value="7d">pēdējās 7d</option>
                 </select>
             </li>
+            {   
+                download
+                ?
+                    (<li className="list-group-item">
+                        {download}
+                    </li>)
+                :
+                    null
+            }
         </ul>
     )
 }
