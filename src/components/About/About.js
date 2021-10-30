@@ -20,7 +20,7 @@ const About = () => {
                     balstoties uz&nbsp;
                     <a href="https://www.gisnet.lv/~marisn/305-76951-Krumins_Gintars_gk17027.pdf">
                         Gintara Krūmiņa bakalaura darbu (LU, darba vadītājs
-                        Māriss Nartišs)
+                        Māris Nartišs)
                     </a>
                     .
                 </div>

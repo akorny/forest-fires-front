@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { About, Api, Index, Menu, NowPage } from "./components"
+import { About, Api, Faq, Index, Menu, NowPage } from "./components"
 
 const App = () => {
     return (
@@ -18,6 +18,9 @@ const App = () => {
                     </Route>
                     <Route exact path="/use-api">
                         <Api />
+                    </Route>
+                    <Route exact path="/faq">
+                        <Faq />
                     </Route>
                     <Route exact path="/">
                         <Index />

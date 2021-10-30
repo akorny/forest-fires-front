@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const getMethodDescription = (method) => {
     switch (method) {
@@ -118,8 +119,17 @@ const NowPageMenu = ({
                     Zems risks
                 </div>
             </li>
-            <li className="list-group-item" style={{textAlign: "justify"}}>
-                {getMethodDescription(method)}
+            <li className="list-group-item" style={{ textAlign: "justify" }}>
+                <div>
+                    {getMethodDescription(method)}{" "}
+                    <Link to={`/faq?q=${method}`}>Sīkāk</Link>
+                </div>
+                <div>
+                    <a href="/faq?q=aprekini">Kā bīstamība tiek aprēķināta?</a>
+                </div>
+                <div>
+                    <a href="/faq?q=viss-sarkans">Kāpēc viss ir tik sarkans?</a>
+                </div>
             </li>
             {   
                 download

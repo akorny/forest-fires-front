@@ -44,6 +44,15 @@ const Menu = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink
+                                to="/faq"
+                                activeClassName="active"
+                                className="nav-link"
+                            >
+                                BUJ
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
                                 to="/about"
                                 activeClassName="active"
                                 className="nav-link"

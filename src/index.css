@@ -29,6 +29,11 @@ code {
   font-size: 1.3em;
 }
 
+th.table-heading-row-span{
+  border-right: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) { 
   .photo-container {
     padding-left: 0;

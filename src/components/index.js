@@ -5,5 +5,6 @@ import MapView from "./MapView/MapView"
 import NowPage from "./NowPage/NowPage"
 import About from "./About/About"
 import Api from "./API/Api"
+import Faq from "./FAQ/Faq"
 
-export { Menu, Index, LoaderCenter, MapView, NowPage, About, Api }
+export { Menu, Index, LoaderCenter, MapView, NowPage, About, Api, Faq }

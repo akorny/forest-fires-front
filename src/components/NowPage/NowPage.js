@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import { LoaderCenter, MapView } from ".."
 import { useRequest } from "../../hooks"
 import NowPageMenu from "./NowPageMenu"
@@ -49,10 +50,9 @@ const NowPage = () => {
                 return "no-layers"
             }
 
-            const layers = data.layersets[parseInt(index)]["layers"][layer]            
+            const layers = data.layersets[parseInt(index)]["layers"][layer]
 
             const _layer = layers.filter((val) => {
-                console.log(val)
                 return val.method === method
             })
 
@@ -71,11 +71,9 @@ const NowPage = () => {
             let date = new Date(data.layersets[parseInt(index)].date)
             date.setHours(date.getHours() + 3)
             return date.toLocaleString("lv")
-        }
-        else {
+        } else {
             return "nav slāņu"
         }
-       
     }
 
     const urls = getGeoJsonUrl()
@@ -128,7 +126,15 @@ const NowPage = () => {
                         download={getDownloadButton()}
                     />
                 </div>
-                <div className="col-md-8">{getMap()}</div>
+                <div className="col-md-8">
+                    <div className="alert alert-info">
+                        Jāievēro, ka ugunsgrēka risks šeit nenozīmē varbūtību,
+                        kā konkrētajā vietā un laikā būs ugunsgrēks, bet gan
+                        relatīvo izcēlšanās vai izplatības bīstamību, salīdzinot
+                        ar citām vietām Latvijā. <Link to="/faq?q=viss-sarkans">Sīkāk</Link>
+                    </div>
+                    {getMap()}
+                </div>
             </div>
         )
 
