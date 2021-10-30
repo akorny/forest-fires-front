@@ -31,7 +31,76 @@ const Faq = () => {
                 IZC – mežu ugunsgrēku izcelšanās riska vērtība;<br/>
                 IZP – mežu ugunsgrēku izplatīšanās riska vērtība.<br/>
                 <br/>
-                Jāievēro, ka ugunsgrēka risks šeit nenozīmē varbūtību, kā konkrētajā vietā un laikā būs ugunsgrēks, bet relatīvo izcēlšanās vai izplatības bīstamību.
+                Jāievēro, ka ugunsgrēka risks šeit nenozīmē varbūtību, kā konkrētajā vietā un laikā būs ugunsgrēks, bet relatīvo izcēlšanās vai izplatības bīstamību.<br/>
+                Iegūstot riska vērtību, ir secināts, vai risks ir zems, vidējs vai augsts, un atbilstoši nokrāsots punkts uz kartes, attiecīgi tabulai:
+                <img src="risk_table.png"/>
+            </p>
+            <h1>
+                Izcēlšanās un izplatības faktori
+            </h1>
+            <p>
+                Meža ugunsgrēku izcēlšanās un izplatības faktorus var iedalīt šādās grupās:
+                <ul>
+                    <li>
+                        <ul>
+                            laikapstākļu faktori:
+                                <li>
+                                    gaisa temperatūra;
+                                </li>
+                                <li>
+                                    nokrišņu daudzums;
+                                </li>
+                                <li>
+                                    karsto dienu skaits;
+                                </li>
+                                <li>
+                                    vēja ātrums.
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            meža vides faktori:
+                                <li>
+                                    meža tips.
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            antropogēnie faktori:
+                                <li>
+                                    vēsturisko ugunsgrēku skaits;
+                                </li>
+                                <li>
+                                    attālums no dzelzceļa;
+                                </li>
+                                <li>
+                                    attālums no autoceļa;
+                                </li>
+                                <li>
+                                    attālums no kūdras iegūves vietas;
+                                </li>
+                                <li>
+                                    attālums no stigas;
+                                </li>
+                                <li>
+                                    attālums no mineralizētas joslas.
+                                </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            topogrāfiskie faktori:
+                                <li>
+                                    nogāžu virziens;
+                                </li>
+                                <li>
+                                    nogāžu slīpums.
+                                </li>
+                        </ul>
+                    </li>
+                </ul> 
             </p>
         </div>
     )
