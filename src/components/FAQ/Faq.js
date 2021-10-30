@@ -85,7 +85,18 @@ const Faq = () => {
                     bijis ugunsgrēku identificēšana satelītattēlos. Šajā pētījumā mākslīgā intelekta prognozēšanas
                     rīks izmantots faktoru svara vērtību noteikšanā.
                 </p>
-            </div>  
+            </div>
+            <div>
+                <h1>
+                    Teorētisks modelēšanas rīks, vai close-to-real time meža ugunsgrēka bīstabības indikātors?
+                </h1>
+                <p>
+                    Lai gan šķiet, ka mūsu rīks ir stipri teorētisks modelis, tomēr tā nav.
+                    Laikapstākļu dati tiek ņemti reāllaikā, kas nozīmē, ka RISK atšķirsies atkarībā
+                    no tiem. Atzīstam, ka neņemam vērā visus faktorus, kas ietekmē gan 
+                    ugunsgrēka izplatību, gan ugunsgrēka rašanos, tāpēc mūsu pieteikums nav tas precīzākais.
+                </p>
+            </div>
         </div>
     )
 }
