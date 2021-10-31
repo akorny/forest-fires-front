@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { LoaderCenter, MapView } from ".."
 import { useRequest } from "../../hooks"
@@ -23,7 +23,7 @@ const NowPage = () => {
     const [from, setFrom] = useState(getNowDate() - 3600)
     const [to, setTo] = useState(getNowDate())
     const [index, setIndex] = useState(0)
-    const [layer, setLayer] = useState("ignition")
+    const [layer, setLayer] = useState("total")
     const [method, setMethod] = useState("jac")
     const [period, setPeriod] = useState("1h")
 
@@ -35,6 +35,10 @@ const NowPage = () => {
             to,
         },
     })
+
+    useEffect(() => {
+        if (data) setIndex(data.layersets.length - 1)
+    }, [data])
 
     const handlePeriodChange = (ev) => {
         const val = ev.target.value
@@ -129,9 +133,10 @@ const NowPage = () => {
                 <div className="col-md-8">
                     <div className="alert alert-info">
                         Jāievēro, ka ugunsgrēka risks šeit nenozīmē varbūtību,
-                        kā konkrētajā vietā un laikā būs ugunsgrēks, bet gan
-                        relatīvo izcēlšanās vai izplatības bīstamību, salīdzinot
-                        ar citām vietām Latvijā. <Link to="/faq?q=viss-sarkans">Sīkāk</Link>
+                        kā konkrētajā vietā un laikā būs ugunsgrēks, bet gan cik
+                        labvelīgi ir apstākļi ugunsgrēka izcelšanai un
+                        izplatībai šajā teritorijā.{" "}
+                        <Link to="/faq?q=viss-sarkans">Sīkāk</Link>
                     </div>
                     {getMap()}
                 </div>

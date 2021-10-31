@@ -38,7 +38,8 @@ const NowPageMenu = ({
     setIndex,
     period,
     setPeriod,
-    download
+    download,
+    status
 }) => {
     return (
         <ul className="list-group">

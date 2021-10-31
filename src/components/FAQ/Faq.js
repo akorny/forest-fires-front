@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Latex from "react-latex"
 
 const useQuery = (param) => {
@@ -24,11 +24,13 @@ const Faq = () => {
     return (
         <div className="row">
             <div className="col">
-                <div class="accordion" id="accordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="viss-sarkans-heading">
+                <div className="accordion" id="accordion">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="viss-sarkans-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("viss-sarkans")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "viss-sarkans"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#viss-sarkans-body"
@@ -40,23 +42,23 @@ const Faq = () => {
                         </h2>
                         <div
                             id="viss-sarkans-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "viss-sarkans"
                             )}`}
                             aria-labelledby="viss-sarkans-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                                 <i>
                                     Jāievēro, ka ugunsgrēka risks šeit nenozīmē
                                     varbūtību, kā konkrētajā vietā un laikā būs
-                                    ugunsgrēks, bet gan relatīvo izcēlšanās vai
-                                    izplatības bīstamību, salidzinot ar citām
-                                    vietām Latvijā.{" "}
+                                    ugunsgrēks, bet gan cik labvelīgi ir
+                                    apstākļi ugunsgrēka izcelšanai un
+                                    izplatībai šajā teritorijā.{" "}
                                 </i>
                                 Arī karte ir tik sarkana tādēļ, ka darbā tiek
                                 izmantoti daļēji neprecīzi dati, īpaši par laika
-                                apstākļiem. Arī darbā tiek izmantotas ne visas
+                                apstākļiem. Tajā pašā laikā, darbā tiek izmantotas ne visas
                                 datu kopas, kas ir aprakstītas{" "}
                                 <a href="https://www.gisnet.lv/~marisn/305-76951-Krumins_Gintars_gk17027.pdf">
                                     bakalaura darbā
@@ -67,10 +69,12 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="aprekini-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="aprekini-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("aprekini")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "aprekini"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#aprekini-body"
@@ -82,13 +86,13 @@ const Faq = () => {
                         </h2>
                         <div
                             id="aprekini-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "aprekini"
                             )}`}
                             aria-labelledby="aprekini-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                                 <p>
                                     Balstoties uz iepriekš izveidoto slāni, kurā
                                     atrodas punkti Latvijas mežos tā, lai katram
@@ -194,10 +198,12 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="faktors-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="faktors-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("faktors")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "faktors"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#faktors-body"
@@ -209,13 +215,13 @@ const Faq = () => {
                         </h2>
                         <div
                             id="faktors-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "faktors"
                             )}`}
                             aria-labelledby="faktors-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                                 <p>
                                     Meža ugunsgrēku izcēlšanās un izplatības
                                     faktorus var iedalīt šādās grupās:
@@ -266,10 +272,12 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="jac-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="jac-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("jac")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "jac"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#jac-body"
@@ -281,13 +289,13 @@ const Faq = () => {
                         </h2>
                         <div
                             id="jac-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "jac"
                             )}`}
                             aria-labelledby="jac-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                                 <p>
                                     <b>Žakāra indeksa (JAC) metode</b> ir jauna
                                     metode, kas potenciāli var tikt izmantota
@@ -320,10 +328,12 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="ahp-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="ahp-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("ahp")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "ahp"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#ahp-body"
@@ -335,13 +345,13 @@ const Faq = () => {
                         </h2>
                         <div
                             id="ahp-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "ahp"
                             )}`}
                             aria-labelledby="ahp-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
+                            <div className="accordion-body">
                                 <p>
                                     <b>Analītiskās hierarhijas procesa (AHP)</b>{" "}
                                     metode ir viena no visbiežāk izmantotajām
@@ -363,10 +373,12 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="mlc-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="mlc-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("mlc")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "mlc"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
                                 data-bs-target="#mlc-body"
@@ -378,57 +390,54 @@ const Faq = () => {
                         </h2>
                         <div
                             id="mlc-body"
-                            class={`accordion-collapse collapse${isOpened(
+                            className={`accordion-collapse collapse${isOpened(
                                 "mlc"
                             )}`}
                             aria-labelledby="mlc-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
-                                    <b>
-                                        Maximum likelihood classification (MLC)
-                                    </b>{" "}
-                                    algoritma metode ir viena no populārākajām
-                                    klasifikācijas metodēm Zemes tālizpētē.
-                                    Metodes līdzšinējais pielietojums
-                                    mežsaimniecībā ir bijis ugunsgrēku
-                                    identificēšana satelītattēlos. Šajā pētījumā
-                                    mākslīgā intelekta prognozēšanas rīks
-                                    izmantots faktoru svara vērtību noteikšanā.
+                            <div className="accordion-body">
+                                <b>Maximum likelihood classification (MLC)</b>{" "}
+                                algoritma metode ir viena no populārākajām
+                                klasifikācijas metodēm Zemes tālizpētē. Metodes
+                                līdzšinējais pielietojums mežsaimniecībā ir
+                                bijis ugunsgrēku identificēšana satelītattēlos.
+                                Šajā pētījumā mākslīgā intelekta prognozēšanas
+                                rīks izmantots faktoru svara vērtību noteikšanā.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="teo-ctrl-heading">
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="aktuali-dati-heading">
                             <button
-                                class={`accordion-button ${isOpenedButton("teo-ctrl")}`}
+                                className={`accordion-button ${isOpenedButton(
+                                    "aktuali-dati"
+                                )}`}
                                 type="button"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#teo-ctrl-body"
-                                aria-expanded={isOpenedAria("teo-ctrl")}
-                                aria-controls="teo-ctrl-body"
+                                data-bs-target="#aktuali-dati-body"
+                                aria-expanded={isOpenedAria("aktuali-dati")}
+                                aria-controls="aktuali-dati-body"
                             >
-                                Teorētisks modelēšanas rīks, vai close-to-real
-                                time meža ugunsgrēka bīstabības indikātors?
+                                Vai kartē ir attēloti aktuāli dati?
                             </button>
                         </h2>
                         <div
-                            id="teo-ctrl-body"
-                            class={`accordion-collapse collapse${isOpened(
-                                "teo-ctrl"
+                            id="aktuali-dati-body"
+                            className={`accordion-collapse collapse${isOpened(
+                                "aktuali-dati"
                             )}`}
-                            aria-labelledby="teo-ctrl-heading"
+                            aria-labelledby="aktuali-dati-heading"
                             data-bs-parent="#accordion"
                         >
-                            <div class="accordion-body">
-                                    Lai gan šķiet, ka mūsu rīks ir stipri
-                                    teorētisks modelis, tomēr tā nav.
-                                    Laikapstākļu dati tiek ņemti reāllaikā, kas
-                                    nozīmē, ka RISK atšķirsies atkarībā no tiem.
-                                    Atzīstam, ka neņemam vērā visus faktorus,
-                                    kas ietekmē gan ugunsgrēka izplatību, gan
-                                    ugunsgrēka rašanos, tāpēc mūsu pieteikums
-                                    nav tas precīzākais.
+                            <div className="accordion-body">
+                                Lai gan šķiet, ka mūsu rīks ir stipri teorētisks
+                                modelis, tomēr tā nav. Laikapstākļu dati tiek
+                                ņemti reāllaikā, kas nozīmē, ka <Link to="/faq?q=aprekini">RISK</Link> atšķirsies
+                                atkarībā no tiem. Atzīstam, ka neņemam vērā
+                                visus faktorus, kas ietekmē gan ugunsgrēka
+                                izplatību, gan ugunsgrēka rašanos, tāpēc mūsu
+                                pieteikums nav tas precīzākais.
                             </div>
                         </div>
                     </div>

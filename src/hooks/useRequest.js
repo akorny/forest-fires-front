@@ -46,9 +46,12 @@ const useRequest = ({ method, url, urlParams }) => {
                 catch (SyntaxError) {
                     setData(rq.response)
                 }
+                setError(false)
             }
             rq.open(method, requestUrl, true)
             rq.send()
+
+            return () => rq.abort()
         }
     }, [method, requestUrl])
 
