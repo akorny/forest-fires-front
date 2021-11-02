@@ -73,7 +73,7 @@ const NowPage = () => {
     const getSelectedTime = () => {
         if (data.layersets.length > 0) {
             let date = new Date(data.layersets[parseInt(index)].date)
-            date.setHours(date.getHours() + 3)
+            date.setHours(date.getHours() + 2)
             return date.toLocaleString("lv")
         } else {
             return "nav slāņu"
